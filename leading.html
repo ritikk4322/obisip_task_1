@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>our page</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="6.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="4.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="5.jpg" style="width:100%">
+      </div>
+      <div class="main">
+        <ul>
+          <ul class="list">
+
+            <li class="logo"><a href="leading.html"><video src="Rkg.mp4" alt="Logo" style="width:
+                   104px;height:70px"></a></li>
+          </ul>
+          <ul class="list2">
+            <li class="active-menu"><a href="leading.html">Home</a></li>
+            <li><a id="long"
+                href="https://www.ibm.com/topics/artificial-intelligence#:~:text=At%20its%20simplest%20form%2C%20artificial,in%20conjunction%20with%20artificial%20intelligence.">Artificial
+                Inteligence</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Cloud_computing">Cloud Computing</a></li>
+            <li><a href="https://www.geeksforgeeks.org/basics-computer-networking/">Computer Network</a></li>
+          </ul>
+        </ul>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </header>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <div class="title">
+    <h1>Computer Technology</h1>
+  </div>
+  </div>
+  <div class="contain">
+    <div class="heading">
+      <h2>Our Courses</h2>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img src="ai.png" alt="#">
+        <p>INTRODUCTION Artificial language
+          <a
+            href="https://www.ibm.com/topics/artificial-intelligence#:~:text=At%20its%20simplest%20form%2C%20artificial,in%20conjunction%20with%20artificial%20intelligence.">read
+            more</a>
+        </p>
+      </div>
+      <div class="card">
+        <img src="cl.jpg" alt="#">
+        <p>INTRODUCTION OF CLOUD COMPUTING.
+          <a href="https://en.wikipedia.org/wiki/Cloud_computing">read more</a>
+        </p>
+      </div>
+
+      <div class="card">
+
+        <img src="cn.png" alt="#">
+        <p> INTRODUCTION OF COMPUTER NETWORK
+          <a href="https://www.geeksforgeeks.org/basics-computer-networking/">read more</a>
+        </p>
+      </div>
+      <div class="card">
+
+        <img src="cb.jpg" alt="#">
+        <p> INTRODUCTION OF CYBER SECURITY.
+          <a href="https://www.javatpoint.com/what-is-cyber-security">read more</a>
+        </p>
+      </div>
+    </div>
+    <div class="about">
+      <h2>Abouts Us</h2>
+      <footer>
+        <a href="https://www.facebook.com/"> <img src="f.png" height="25px" width="25px"> </a>
+        <a href="https://www.instagram.com/"> <img src="insa.jpg" height="25px" width="25px"> </a>
+        <a href="https://twitter.com/"> <img src="tiw.jpg" height="25px" width="25px"> </a>
+        <p>
+            Name    :Ritik Kumar Gupta<br>
+            Email-id:rk444gy@gmai.com<br>
+            Phone-no:9455471121</b></p>
+      </footer>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+</body>
+
+</html>
